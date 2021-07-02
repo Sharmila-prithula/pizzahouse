@@ -9,7 +9,7 @@
             </div>
             <div>
                 @foreach($pizzas as $pizza)
-                <p>{{ $pizza['name'] }}-{{ $pizza['type'] }}- {{ $pizza['base'] }}</p>
+                {{ $pizza->name }}-{{ $pizza->type }}- {{ $pizza->base }}</p>
                 @endforeach
             </div>
         </div>
