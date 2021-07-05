@@ -1,15 +1,15 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+<div class="wrapper pizza-index">
     <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
         <div class="content">
             <div class="title m-b-md">
-                Pizza List
+                <h1> Pizza List</h1>
             </div>
-            <div>
+            <div class="pizza-item">
                 @foreach($pizzas as $pizza)
-                {{ $pizza->name }}-{{ $pizza->type }}- {{ $pizza->base }}</p>
+                <h4> <a href="/pizzas/{{ $pizza->id }}">{{ $pizza->name }}</a></h4>
                 @endforeach
             </div>
         </div>
